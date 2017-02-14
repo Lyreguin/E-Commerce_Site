@@ -9,7 +9,7 @@ h1, h2, h3 {margin-top: 0;}
 ul, ol {margin: 0;}
 p {margin: 0;}
 html, body{
-	background:url(../images/bg.jpg)no-repeat;
+	background:url(../images/bg2.jpg)no-repeat;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-o-background-size:cover;
@@ -58,7 +58,7 @@ ul.navig li a:hover, .active{
 	-ms-border-radius:8px;
 }
 .banner{
-	background:url(../images/slide1.jpg) no-repeat;
+	background:url(../images/house-plant-pots.jpg) no-repeat;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -69,7 +69,7 @@ ul.navig li a:hover, .active{
 	padding:15em 0;
 }
 .banner1{
-	background:url(../images/slide2.jpg) no-repeat;
+	background:url(../images/violin.jpg) no-repeat;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -78,7 +78,7 @@ ul.navig li a:hover, .active{
 	text-align:center;
 }
 .banner2{
-	background:url(../images/slide3.jpg) no-repeat;
+	background:url(../images/watering-can-plant.jpg) no-repeat;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -456,7 +456,7 @@ p.customer{
 }
 /*-- Footer starts Here ---*/
 .footer{
-	background:url(../images/bottom-bg.jpg)no-repeat;
+	background:url(../images/white-shoe-plant.jpg)no-repeat;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
