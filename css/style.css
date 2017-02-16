@@ -643,10 +643,10 @@ p.copyright a:hover{
 }
 .resp-tab-item:hover {
 	text-shadow: none;
-	color: #F27141;
+	color: #000;
 }
 .resp-tab-active{
-	background:#ee4a02;
+	background:#accea5;
 	text-shadow: none;
 	color:#fff;
 }
@@ -936,7 +936,7 @@ div.register-bottom-grid {
 	float:left;
 }
 .product-listy{
-	background:#ee4a02;
+	background:#accea5;
 }
 ul.product-list{
 	padding:0em 0 0.5em 0;
@@ -1183,7 +1183,7 @@ ul.product-qty {
 }
 h3.new-models {
 	font-size: 1.2em;
-	background: #ee4a02;
+	background: #accea5;
 	padding: 5px;
 	font-weight: 600;
 	color:#fff;
