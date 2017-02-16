@@ -23,7 +23,8 @@ html, body{
 	margin-top:3em;
 }
 .header-top{
-	background:#181818;
+	background:#898989;
+	opacity: 0.6;
 }
 .logo{
 	float:left;
@@ -41,8 +42,8 @@ ul.navig li{
 }
 ul.navig li a{
 	text-transform:uppercase;
-	font-size:14px;
-	color:#fff;
+	font-size:15px;
+	color:#000;
 	text-decoration:none;
 	font-family: 'Doppio One', sans-serif;
 	font-weight:400;
