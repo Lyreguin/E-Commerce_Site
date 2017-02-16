@@ -29,12 +29,16 @@ html, body{
 .logo{
 	float:left;
 }
+.logotitle{
+	font-family: 'Roboto Condensed';
+}
+
 .navigation{
 	float:right;
 }
 ul.navig{
 	padding:o;
-	margin:1.5em 2em 0;
+	margin:1.5em 3em 0;
 }
 ul.navig li{
 	display: inline-block;
