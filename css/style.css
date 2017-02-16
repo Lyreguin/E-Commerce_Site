@@ -8,13 +8,16 @@ h4, h5, h6,
 h1, h2, h3 {margin-top: 0;}
 ul, ol {margin: 0;}
 p {margin: 0;}
-html, body{
+html {
 	background:url(../images/bg3.jpg)no-repeat;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-o-background-size:cover;
 	-moz-background-size:cover;
 	-ms-background-size:cover;
+}
+body{
+	background: transparent;
 	font-family: 'Roboto Condensed', sans-serif;
    	font-size: 100%;
 }
