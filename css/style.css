@@ -354,7 +354,7 @@ p.customer{
 	font-family: 'Doppio One', sans-serif;
 	font-weight:400;
 	font-style: italic;
-	color:#b29e98;
+	color:#532152;
 	font-size:0.875em;
 }
 .biseller-name1{
@@ -441,8 +441,8 @@ p.customer{
 	text-transform: uppercase;
 	text-decoration:none;
 	font-size:1em;
-	color:#987f77;
-	border:2px solid #987f77;
+	color:#532152;
+	border:2px solid #000000;
 	padding:10px 15px;
 }
 .price-s a:hover{
