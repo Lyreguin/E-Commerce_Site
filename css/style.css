@@ -76,6 +76,7 @@ ul.navig li a:hover, .active{
 	min-height:700px;
 	text-align:center;
 	padding:15em 0;
+	text-shadow: 2px 0 2px #000000, 0 -2px 2px #000000, 0 2px 2px #000000, -2px 0 2px #000000;
 }
 .banner1{
 	background:url(../images/violin.jpg) no-repeat;
@@ -471,11 +472,11 @@ p.customer{
 	-moz-background-size:cover;
 	-ms-background-size:cover;
 	-o-background-size:cover;
-	min-height:400px;
+	min-height:200px;
 	border-top:3px solid #d4c9c6;
 	border-bottom:3px solid #d4c9c6;
 	text-align:center;
-	padding-top:13em;
+	padding-top:6em;
 }
 .footer a{
 	color:#fff;
@@ -488,7 +489,7 @@ p.customer{
 	text-decoration:none;
 }
 .footer a:hover{
-	border:2px solid #ee4a02;
+	border:1px solid #ee4a02;
 	color:#ee4a02;
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -497,7 +498,7 @@ p.customer{
 	-ms-transition:0.5s all;
 }
 .footer-top{
-	padding:2em 0;
+	padding:1em 0;
 	background:#fff;
 	text-align:center;
 }
