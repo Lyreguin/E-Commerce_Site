@@ -121,16 +121,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						 </div>
 						 <div>
 						 <h3>NEW USER REGISTRATION</h3>
-						 <?php
-						 	$query = "SELECT Name FROM customers";
-						 	mysqli_query($db, $query) or die("error");
-
-
-						 	$result = mysqli_query($db, $query);
-						 	$row = mysqli_fetch_array($result);
-						 	echo $row[0];
-						 ?>
-
 						 </div>
 						 <div class="register-top-grid">
 						 	<form method="post" action="register.php">
@@ -166,7 +156,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							 </div>
 							 <div>
 								 <span>Zip Code</span>
-								 <input type="text" name="zip"> 
+								 <input type="number" name="zip"> 
 							 </div>
 							 
 							 </div>
@@ -207,15 +197,36 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						 		$result = mysqli_query($db, $query);
 						 		if (mysqli_fetch_array($result) !=0 )
 						 		{
-						 			echo "hello";
-						 			// Here we say that you are already a member!
+						 			echo "You are already a member!";
 						 		} 
 						 		else 
-						 		{
-						 			echo "goodbye";
-						 			// Here we say that you registered effectively and make a post request to our sql database!
+						 		{						 			// Here we say that you registered effectively and make a post request to our sql database!
 						 			// I'm going to sleep now.
 						 			// Also I had to change my database table name to customers because I couldn't delete siteUsers.
+						 			$name = $_POST['firstName']." ".$_POST['lastName'];
+						 			$email = $_POST['email'];
+						 			$address = $_POST['address'];
+						 			$city = $_POST['city'];
+						 			$state = $_POST['state'];
+						 			$zip = $_POST['zip'];
+						 			$sql = "INSERT INTO customers (Name, Email, Address, City, State, Zip Code) 
+						 			VALUES ('$name', '$email', '$address', '$city', '$state', '$zip')";
+						 			if (mysqli_query($db, $sql)) 
+						 			{
+						 				echo "New Record created";
+						 			}
+						 			else
+						 			{
+							 			echo $name;
+							 			echo $email;
+							 			echo $address;
+							 			echo $city;
+							 			echo $state;
+							 			echo $zip;
+							 			echo "We failed. <br>";
+							 			echo mysqli_error($db);
+
+							 		}
 						 		}
 
 
