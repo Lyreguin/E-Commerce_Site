@@ -1,8 +1,8 @@
 
 <?php 
-	$db = mysqli_connect('localhost:3306', 'root', '', 'siteUsers') or die('Problem connection to server.');
+	$db = mysqli_connect('localhost:3306', 'root', '', 'site_users') or die('Problem connection to server.');
 	//echo "string";
-	$_POST["password"]
+	//$_POST["password"]
 ?>
 
 
@@ -99,7 +99,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				 <h3 class="new-models">For New Customers</h3>
 				 <div class="register">
-				  	  <form action="register.php" method="post"> 
+				  	 <form action="register.php" method="post"> 
 						 <div>
 						 <h3>LOGIN</h3>
 						 </div>
@@ -179,18 +179,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										<input type="password" name="confirmPassword">
 									 </div>
 									 <div class="clearfix"> </div>
+									 <div>
 									 <a class="news-letter" href="#">
 									 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up for Newsletter</label>
 									 </a>
+									 </div>
 							 </div>
+							 <input class="register-but" type="submit" value="submit">
 						</form>
-						<div class="clearfix"> </div>
-						<div class="register-but">
-						   <form>
-							   <input type="submit" value="submit">
-							   <div class="clearfix"> </div>
-						   </form>
-						</div>
+						
+						
 				   </div>
 			</div>
 			<div class="clearfix"></div>
