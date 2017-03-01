@@ -1,7 +1,7 @@
 
 <?php 
 	$db = mysqli_connect('localhost:3306', 'root', '', 'siteUsers') or die('Problem connection to server.');
-	//echo "string";
+	//echo "test string";
 	$_POST["password"]
 ?>
 
