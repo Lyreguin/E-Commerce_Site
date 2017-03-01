@@ -91,7 +91,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<ul class="product-top-list">
 						<li><a href="index.html">Home</a>&nbsp;<span>&gt;</span></li>
 						<li><a href="#">Account</a>&nbsp;<span>&gt;</span></li>
-						<li><span class="act"><a href="register.html">Register</a></span>&nbsp;</li>
+						<li><span class="act"><a href="register.php">Register</a></span>&nbsp;</li>
 					</ul>
 					<p class="back"><a href="index.html">Back to Previous</a></p>
 					<div class="clearfix"></div>
