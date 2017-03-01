@@ -209,7 +209,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						 			$city = $_POST['city'];
 						 			$state = $_POST['state'];
 						 			$zip = $_POST['zip'];
-						 			$sql = "INSERT INTO customers (Name, Email, Address, City, State, Zip Code) 
+						 			$sql = "INSERT INTO customers (`Name`, `Email`, `Address`, `City`, `State`, `Zip Code`) 
 						 			VALUES ('$name', '$email', '$address', '$city', '$state', '$zip')";
 						 			if (mysqli_query($db, $sql)) 
 						 			{
