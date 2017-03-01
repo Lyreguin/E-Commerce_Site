@@ -38,11 +38,11 @@ body{
 
 .navigation{
 	float:right;
-	padding-top:20px;
+
 }
 ul.navig{
-	padding:o;
-	margin:1.5em 3em 0;
+	margin-top: 43px;
+	margin-bottom: 20px;
 }
 ul.navig li{
 	display: inline-block;
@@ -56,6 +56,7 @@ ul.navig li a{
 	font-family: 'Doppio One', sans-serif;
 	font-weight:400;
 	padding:10px 15px;
+
 }
 ul.navig li a:hover, .active{
 	background:#8f746c;
