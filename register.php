@@ -1,7 +1,8 @@
 
 <?php 
-	$db = mysqli_connect('localhost', 'root', '', 'siteUsers') or die('Problem connection to server.');
-	echo "string";
+	$db = mysqli_connect('localhost:3306', 'root', '', 'siteUsers') or die('Problem connection to server.');
+	//echo "string";
+	$_POST["password"]
 ?>
 
 
@@ -98,7 +99,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				 <h3 class="new-models">For New Customers</h3>
 				 <div class="register">
-				  	  <form> 
+				  	  <form action="register.php" method="post"> 
 						 <div>
 						 <h3>LOGIN</h3>
 						 </div>
@@ -127,15 +128,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<!--<h3>PERSONAL INFORMATION</h3>-->
 							 <div>
 								<span>First Name<label>*</label></span>
-								<input type="text"> 
+								<input type="text" name="firstName"> 
 							 </div>
 							 <div>
 								<span>Last Name<label>*</label></span>
-								<input type="text"> 
+								<input type="text" name="lastName"> 
 							 </div>
 							 <div>
 								 <span>Email<label>*</label></span>
-								 <input type="text"> 
+								 <input type="text" name="email"> 
 							 </div>
 							 <div style="visibility:hidden">
 								 <span>Invisible Placeholder<label>*</label></span>
@@ -144,19 +145,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							 
 							 <div>
 								 <span>Address<label>*</label></span>
-								 <input type="text"> 
+								 <input type="text" name="address"> 
 							 </div>
 							 <div>
 								 <span>City<label>*</label></span>
-								 <input type="text"> 
+								 <input type="text" name="city"> 
 							 </div>
 							 <div>
 								 <span>State<label>*</label></span>
-								 <input type="text"> 
+								 <input type="text" name="state"> 
 							 </div>
 							 <div>
 								 <span>Zip Code<label>*</label></span>
-								 <input type="text"> 
+								 <input type="text" name="zip"> 
 							 </div>
 							 
 							 </div>
@@ -171,11 +172,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									 </div>
 									 <div>
 										<span>Password<label>*</label></span>
-										<input type="password">
+										<input type="password" name="password">
 									 </div>
 									 <div>
 										<span>Confirm Password<label>*</label></span>
-										<input type="password">
+										<input type="password" name="confirmPassword">
 									 </div>
 									 <div class="clearfix"> </div>
 									 <a class="news-letter" href="#">
