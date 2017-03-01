@@ -910,10 +910,9 @@ a.forgot {
 .news-letter:hover {
 	color:#00BFF0;
 }
-.register-but{
+
+.register-but {
 	margin-top:1em;
-}
-.register-but form input[type="submit"] {
 	background:#fb4d01;
 	color: #FFF;
 	font-size: 0.8em;
