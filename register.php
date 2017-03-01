@@ -1,8 +1,6 @@
 
 <?php 
-	$db = mysqli_connect('localhost:3306', 'root', '', 'siteUsers') or die('Problem connection to server.');
-	//echo "test string";
-	$_POST["password"]
+	$db = mysqli_connect('localhost', 'root', '', 'siteUsers') or die('Problem connection to server.');
 ?>
 
 
@@ -123,20 +121,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						 </div>
 						 <div>
 						 <h3>NEW USER REGISTRATION</h3>
+						 <?php
+						 	$query = "SELECT Name FROM customers";
+						 	mysqli_query($db, $query) or die("error");
+
+
+						 	$result = mysqli_query($db, $query);
+						 	$row = mysqli_fetch_array($result);
+						 	echo $row[0];
+						 ?>
+
 						 </div>
 						 <div class="register-top-grid">
+						 	<form method="post" action="register.php">
 							<!--<h3>PERSONAL INFORMATION</h3>-->
 							 <div>
 								<span>First Name<label>*</label></span>
-								<input type="text" name="firstName"> 
+								<input type="text" name="firstName" required> 
 							 </div>
 							 <div>
 								<span>Last Name<label>*</label></span>
-								<input type="text" name="lastName"> 
+								<input type="text" name="lastName" reuquired> 
 							 </div>
 							 <div>
 								 <span>Email<label>*</label></span>
-								 <input type="text" name="email"> 
+								 <input type="email" name="email" required placeholder="Enter a valid email address"> 
 							 </div>
 							 <div style="visibility:hidden">
 								 <span>Invisible Placeholder<label>*</label></span>
@@ -144,19 +153,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							 </div>
 							 
 							 <div>
-								 <span>Address<label>*</label></span>
+								 <span>Address</span>
 								 <input type="text" name="address"> 
 							 </div>
 							 <div>
-								 <span>City<label>*</label></span>
+								 <span>City</span>
 								 <input type="text" name="city"> 
 							 </div>
 							 <div>
-								 <span>State<label>*</label></span>
+								 <span>State</span>
 								 <input type="text" name="state"> 
 							 </div>
 							 <div>
-								 <span>Zip Code<label>*</label></span>
+								 <span>Zip Code</span>
 								 <input type="text" name="zip"> 
 							 </div>
 							 
@@ -170,14 +179,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										<span>Invisible Placeholder<label>*</label></span>
 										<input type="text"> 
 									 </div>
-									 <div>
+	<!-- 								 <div>
 										<span>Password<label>*</label></span>
 										<input type="password" name="password">
 									 </div>
 									 <div>
 										<span>Confirm Password<label>*</label></span>
 										<input type="password" name="confirmPassword">
-									 </div>
+									 </div> -->
 									 <div class="clearfix"> </div>
 									 <div>
 									 <a class="news-letter" href="#">
@@ -185,10 +194,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									 </a>
 									 </div>
 							 </div>
-							 <input class="register-but" type="submit" value="submit">
+							 <input class="register-but" type="submit" value="submit" name="submit">
 						</form>
-						
-						
+						<?php 
+
+							function display()
+							{
+								$db = mysqli_connect('localhost', 'root', '', 'siteUsers') or die('Problem connection to server.');
+								$email = $_POST['email'];
+								$query = "SELECT * FROM customers WHERE email='$email'";
+						 		mysqli_query($db, $query) or die("error");
+						 		$result = mysqli_query($db, $query);
+						 		if (mysqli_fetch_array($result) !=0 )
+						 		{
+						 			echo "hello";
+						 			// Here we say that you are already a member!
+						 		} 
+						 		else 
+						 		{
+						 			echo "goodbye";
+						 			// Here we say that you registered effectively and make a post request to our sql database!
+						 			// I'm going to sleep now.
+						 			// Also I had to change my database table name to customers because I couldn't delete siteUsers.
+						 		}
+
+
+							}
+							if(isset($_POST['submit']))
+							{
+								display();
+							}
+							?>
 				   </div>
 			</div>
 			<div class="clearfix"></div>
