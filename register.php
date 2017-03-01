@@ -106,11 +106,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						 <div class="register-top-grid">
 									 <div>
 										<span>Email<label>*</label></span>
-										<input type="text">
+										<input type="text"  name="loginEmail">
 									 </div>
 									 <div>
 										<span>Password<label>*</label></span>
-										<input type="text">
+										<input type="text"  name="loginPassword">
 									 </div>
 						 </div>
 						 <div style="visibility:hidden">
