@@ -135,7 +135,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							 </div>
 							 <div>
 								 <span>Email<label>*</label></span>
-								 <input type="email" name="email" required placeholder="Enter a valid email address"> 
+								 <input type="text" name="email" required placeholder="Enter a valid email address"> 
 							 </div>
 							 <div style="visibility:hidden">
 								 <span>Invisible Placeholder<label>*</label></span>
@@ -156,7 +156,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							 </div>
 							 <div>
 								 <span>Zip Code</span>
-								 <input type="number" name="zip"> 
+								 <input type="text" name="zip"> 
 							 </div>
 							 
 							 </div>
