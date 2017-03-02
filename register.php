@@ -148,15 +148,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							 </div>
 							 <div>
 								 <span>City</span>
-								 <input type="text" name="city"> 
+								 <input type="text" name="city" pattern="[A-Za-z]{,30}" title="Letters only"> 
 							 </div>
 							 <div>
 								 <span>State</span>
-								 <input type="text" name="state"> 
+								 <input type="text" name="state" pattern="[A-Za-z]{,30}" title="Letters only"> 
 							 </div>
 							 <div>
 								 <span>Zip Code</span>
-								 <input type="text" name="zip" pattern=".{5}" title="5 digit numeric zip code"> 
+								 <input type="text" name="zip" pattern="[0-9]{5}" title="5 digit numeric zip code"> 
 							 </div>
 							 
 							 </div>
