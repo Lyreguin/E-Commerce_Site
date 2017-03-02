@@ -1,8 +1,4 @@
 
-<?php 
-	$db = mysqli_connect('localhost', 'root', '', 'siteUsers') or die('Problem connection to server.');
-?>
-
 
 
 
@@ -190,7 +186,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 							function display()
 							{
-								$db = mysqli_connect('localhost', 'root', '', 'siteUsers') or die('Problem connection to server.');
+								$db = mysqli_connect('localhost', 'root', '', 'siteusers') or die('Problem connection to server.');
 								$email = $_POST['email'];
 								$query = "SELECT * FROM customers WHERE email='$email'";
 						 		mysqli_query($db, $query) or die("error");
