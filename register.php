@@ -156,7 +156,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							 </div>
 							 <div>
 								 <span>Zip Code</span>
-								 <input type="text" name="zip"> 
+								 <input type="text" name="zip" pattern=".{5}" title="5 digit numeric zip code"> 
 							 </div>
 							 
 							 </div>
