@@ -131,7 +131,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							 </div>
 							 <div>
 								<span>Last Name<label>*</label></span>
-								<input type="text" name="lastName" reuquired> 
+								<input type="text" name="lastName" required> 
 							 </div>
 							 <div>
 								 <span>Email<label>*</label></span>
