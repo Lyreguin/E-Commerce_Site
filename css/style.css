@@ -1051,6 +1051,7 @@ ul.tags_links li a:hover{
 }
 .new-product{
 	width:100%;
+	float:right;
 	background:#fff;
 	min-height:800px;
 	padding:2em;
