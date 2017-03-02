@@ -197,7 +197,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						 		$result = mysqli_query($db, $query);
 						 		if (mysqli_fetch_array($result) !=0 )
 						 		{
-						 			echo "You are already a member!";
+									echo "<script type='text/javascript'>alert('This email address is already associated with an account.')</script>";
 						 		} 
 						 		else 
 						 		{						 			// Here we say that you registered effectively and make a post request to our sql database!
@@ -213,7 +213,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						 			VALUES ('$name', '$email', '$address', '$city', '$state', '$zip')";
 						 			if (mysqli_query($db, $sql)) 
 						 			{
-						 				echo "New Record created";
+						 				echo "<script type='text/javascript'>alert('Account Created Successfully!')</script>";
 						 			}
 						 			else
 						 			{
