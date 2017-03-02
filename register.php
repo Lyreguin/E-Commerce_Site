@@ -140,7 +140,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							 
 							 <div>
 								 <span>Address</span>
-								 <input type="text" name="address" pattern="[A-Za-z0-9]{1,30}$" title="Letters only"> 
+								 <input type="text" name="address" pattern="[A-Za-z0-9]{1,30}$" title="Alphanumeric characters only"> 
 							 </div>
 							 <div>
 								 <span>City</span>
