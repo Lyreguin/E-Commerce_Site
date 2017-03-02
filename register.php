@@ -123,11 +123,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<!--<h3>PERSONAL INFORMATION</h3>-->
 							 <div>
 								<span>First Name<label>*</label></span>
-								<input type="text" name="firstName" required pattern="[A-Za-z]{,30}" title="Letters only"> 
+								<input type="text" name="firstName" required pattern="[A-Za-z]{1,30}" title="Letters only"> 
 							 </div>
 							 <div>
 								<span>Last Name<label>*</label></span>
-								<input type="text" name="lastName" required pattern="[A-Za-z]{,30}" title="Letters only"> 
+								<input type="text" name="lastName" required pattern="[A-Za-z]{1,30}" title="Letters only"> 
 							 </div>
 							 <div>
 								 <span>Email<label>*</label></span>
@@ -140,15 +140,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							 
 							 <div>
 								 <span>Address</span>
-								 <input type="text" name="address"> 
+								 <input type="text" name="address" pattern="[A-Za-z0-9]{1,30}$" title="Letters only"> 
 							 </div>
 							 <div>
 								 <span>City</span>
-								 <input type="text" name="city" pattern="[A-Za-z]{,30}" title="Letters only"> 
+								 <input type="text" name="city" pattern="[A-Za-z]{1,30}$" title="Letters only"> 
 							 </div>
 							 <div>
 								 <span>State</span>
-								 <input type="text" name="state" pattern="[A-Za-z]{,30}" title="Letters only"> 
+								 <input type="text" name="state" pattern="[A-Za-z]{1,30}$" title="Letters only"> 
 							 </div>
 							 <div>
 								 <span>Zip Code</span>
