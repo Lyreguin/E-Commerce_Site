@@ -123,15 +123,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<!--<h3>PERSONAL INFORMATION</h3>-->
 							 <div>
 								<span>First Name<label>*</label></span>
-								<input type="text" name="firstName" required pattern="[A-Za-z]{1,30}" title="Letters only"> 
+								<input type="text" name="firstName" required pattern="[A-Za-z '-]{1,30}" title="Letters only"> 
 							 </div>
 							 <div>
 								<span>Last Name<label>*</label></span>
-								<input type="text" name="lastName" required pattern="[A-Za-z]{1,30}" title="Letters only"> 
+								<input type="text" name="lastName" required pattern="[A-Za-z '-]{1,30}" title="Letters only"> 
 							 </div>
 							 <div>
 								 <span>Email<label>*</label></span>
-								 <input type="text" name="email" required placeholder="Enter a valid email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="example@test.com"> 
+								 <input type="text" name="email" required placeholder="Enter a valid email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$" title="example@test.com"> 
 							 </div>
 							 <div style="visibility:hidden">
 								 <span>Invisible Placeholder<label>*</label></span>
@@ -140,11 +140,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							 
 							 <div>
 								 <span>Address</span>
-								 <input type="text" name="address" pattern="[A-Za-z0-9]{1,30}$" title="Alphanumeric characters only"> 
+								 <input type="text" name="address" pattern="[A-Za-z0-9 ]{1,30}$" title="Alphanumeric characters only"> 
 							 </div>
 							 <div>
 								 <span>City</span>
-								 <input type="text" name="city" pattern="[A-Za-z]{1,30}$" title="Letters only"> 
+								 <input type="text" name="city" pattern="[A-Za-z ]{1,30}$" title="Letters only"> 
 							 </div>
 							 <div>
 								 <span>State</span>
