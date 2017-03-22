@@ -65,7 +65,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				-->
 					<li><a href="">Shop</a></li>
 					<li><a href="about.html">About</a></li>
-					<li><a href="register.php">Sign In</a></li>
+					<li><a href="login.html">Log In</a></li>
+					<li><a href="register.php">Sign Up</a></li>
 
 				</ul>
 				<script>
@@ -94,19 +95,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				 <h3 class="new-models">For New Customers</h3>
 				 <div class="register">
 				  	 <form action="register.php" method="post"> 
-						 <div>
-						 <h3>LOGIN</h3>
-						 </div>
-						 <div class="register-top-grid">
-									 <div>
-										<span>Email<label>*</label></span>
-										<input type="text"  name="loginEmail">
-									 </div>
-									 <div>
-										<span>Password<label>*</label></span>
-										<input type="text"  name="loginPassword">
-									 </div>
-						 </div>
 						 <div style="visibility:hidden">
 							<span>Invisible Placeholder<label>*</label></span>
 							<input type="text"> 
@@ -256,7 +244,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									    echo 'Message could not be sent.';
 									    echo 'Mailer Error: ' . $mail->ErrorInfo;
 									} else {
-									    echo 'Message has been sent';
 									}
 						 		}
 						 	}
