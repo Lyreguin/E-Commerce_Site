@@ -289,20 +289,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									// $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 									// $mail->Port = 587;                                    // TCP port to connect to
 
-									$mail->setFrom('from@example.com', 'Mailer');
-									$mail->addAddress('jbh8qz@virginia.edu', 'Joe User');     // Add a recipient
-									$mail->addAddress('ellen@example.com');               // Name is optional
-									$mail->addReplyTo('info@example.com', 'Information');
-									$mail->addCC('cc@example.com');
-									$mail->addBCC('bcc@example.com');
+									$mail->setFrom('from@example.com', 'Pimped Up Plants');
+									$mail->addAddress('jbh8qz@virginia.edu', $name);     // Add a recipient
+									$mail->addAddress($email, $name);               // Name is optional
+									//$mail->addReplyTo('info@example.com', 'Information');
+									//$mail->addCC('cc@example.com');
+									//$mail->addBCC('bcc@example.com');
 
-									$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-									$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+									//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+									//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 									$mail->isHTML(true);                                  // Set email format to HTML
 
-									$mail->Subject = 'Here is the subject';
-									$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-									$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+									$mail->Subject = 'Pimped Up Plants';
+									$mail->Body    = 'Thank you for subscribing to the Pimped Up Plants mailing list!';
+									$mail->AltBody = 'Thank you for subscribing to the Pimped Up Plants mailing list!';
 
 									if(!$mail->send()) {
 									    echo 'Message could not be sent.';
