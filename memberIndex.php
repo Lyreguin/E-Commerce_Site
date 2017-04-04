@@ -9,6 +9,18 @@ http://www.evoluted.net/thinktank/web-development/paypal-php-integration
 https://www.sandbox.paypal.com/us/cgi-bin/webscr?SESSION=O15IpDSWsmsBJ5VGwU3dDZWngTkpwLuXZm5qU9DOeIfTnfZKT8PPUfa7q9u&dispatch=5885d80a13c0db1f8e263663d3faee8d94717bd303200c3af9aadd01a5f55080
 http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 -->
+
+<?php
+// Retrieve member's information to display on their homepage
+
+//$db = mysqli_connect('localhost', 'root', '', 'siteusers') or die('Problem connection to server.');
+//$email = $_POST['email'];
+//$query = "SELECT * FROM customers WHERE email='$email'";
+//mysqli_query($db, $query) or die("error");
+//$result = mysqli_query($db, $query);
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -44,7 +56,7 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 			
 			<div class="navigation">
 				<ul class="navig">
-					<li><a href="memberIndex.html">Home</a></li>
+					<li><a href="memberIndex.php">Home</a></li>
 					<li><a href="">Shop</a></li>
 					<li><a href="about.html">About</a></li>
 					<li><a href="login.html">Log In</a></li>
@@ -78,7 +90,7 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 		    <ul class="rslides" id="slider3">
 		    <li>
 		    	<div class="banner">
-					<h1>Recycled, Remade, Repurposed<br></h1>
+					<h1>Welcome!<br></h1>
 					<br>
 					<br>
 					<br>
@@ -88,30 +100,6 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 					<br>
 					<h2>Custom Modern Art Plants</h2>
 				</div>
-		   	</li>
-		   	<li>
-		    	<div class="banner banner2">
-					<h1>Recycled, Remade, Repurposed<br></h1>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<h2>Custom Modern Art Plants</h2></div>
-		   	</li>
-		   	<li>
-		    	<div class="banner banner1">
-					<h1>Recycled, Remade, Repurposed<br></h1>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<h2>Custom Modern Art Plants</h2></div>
 		   	</li>
 		   	</ul>
 		    <div class="clearfix"> </div>
@@ -124,17 +112,17 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 			<ul id="memberFlexisel">
 
 				<li>
-					<div class="biseller-column2">
+					<div class="biseller-column">
 					<img src="images/fabric.jpg" alt="" class="veiw-img">
-						<div class="veiw-img-mark">
-							<a href="single.html">Add to Cart</a>
+						<div class="veiw-img-mark2">
+							<a href="single.html">Member's Only Discount!</a>
 						</div>
 					<div class="biseller-name">
 						<h4>Fabric</h4>
 						<small>by Ankino Frique</small>
 					</div>
 					<div class="biseller-name1">
-						<p>$219.99</p>
+						<p style="color:red; font-size:200%;">$49.99</p>
 					</div>
 					<div class="clearfix"></div>
 					<div class="price-s">
@@ -152,17 +140,17 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 					</div>
 				</li>
 				<li>
-					<div class="biseller-column2">
+					<div class="biseller-column">
 					<img src="images/fish-in-jar.jpg" alt="" class="veiw-img">
-						<div class="veiw-img-mark">
-							<a href="single.html">Add to Cart</a>
+						<div class="veiw-img-mark2">
+							<a href="single.html">Member's Only Discount!</a>
 						</div>
 					<div class="biseller-name">
 						<h4>Fish in Jar</h4>
 						<small>by Enrique Salmo</small>
 					</div>
 					<div class="biseller-name1">
-						<p>$899.99</p>
+						<p style="color:red; font-size:200%;">$99.99</p>
 					</div>
 					<div class="clearfix"></div>
 					<div class="price-s">
@@ -180,17 +168,17 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 					</div>
 				</li>
 				<li>
-					<div class="biseller-column2">
+					<div class="biseller-column">
 					<img src="images/white-shoe-plant-fit.jpg" alt="" class="veiw-img">
-						<div class="veiw-img-mark">
-							<a href="single.html">Add to Cart</a>
+						<div class="veiw-img-mark2">
+							<a href="single.html">Member's Only Discount!</a>
 						</div>
 					<div class="biseller-name">
 						<h4>White Shoe Plant</h4>
 						<small>by Marco Spielmann</small>
 					</div>
 					<div class="biseller-name1">
-						<p>$219.99</p>
+						<p style="color:red; font-size:200%;">$49.99</p>
 					</div>
 					<div class="clearfix"></div>
 					<div class="price-s">
@@ -218,9 +206,6 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 				<li>
 					<div class="biseller-column">
 					<img src="images/fabric.jpg" alt="" class="veiw-img">
-						<div class="veiw-img-mark">
-							<a href="single.html">Add to Cart</a>
-						</div>
 					<div class="biseller-name">
 						<h4>Fabric</h4>
 						<small>by Ankino Frique</small>
@@ -246,9 +231,6 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 				<li>
 					<div class="biseller-column">
 					<img src="images/fish-in-jar.jpg" alt="" class="veiw-img">
-						<div class="veiw-img-mark">
-							<a href="single.html">Add to Cart</a>
-						</div>
 					<div class="biseller-name">
 						<h4>Fish in Jar</h4>
 						<small>by Enrique Salmo</small>
@@ -274,9 +256,6 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 				<li>
 					<div class="biseller-column">
 					<img src="images/white-shoe-plant-fit.jpg" alt="" class="veiw-img">
-						<div class="veiw-img-mark">
-							<a href="single.html">Add to Cart</a>
-						</div>
 					<div class="biseller-name">
 						<h4>White Shoe Plant</h4>
 						<small>by Marco Spielmann</small>

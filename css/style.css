@@ -589,6 +589,20 @@ img.veiw-img{
 .biseller-column:hover div.veiw-img-mark{
 	display: block;
 }
+.veiw-img-mark2{
+	position:absolute;
+	top:30%;
+	left:12.5%;
+}
+.veiw-img-mark2 a{
+	background:#ff0000;
+	padding:10px;
+	color:#000;
+	font-size:1.75em;
+	font-weight:900;
+	text-decoration:none;
+	text-transform:uppercase;
+}
 p.copyright{
 	font-size:14px;
 	color:#fff;
