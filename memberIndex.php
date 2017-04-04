@@ -90,7 +90,7 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 		    <ul class="rslides" id="slider3">
 		    <li>
 		    	<div class="banner">
-					<h1>Welcome!<br></h1>
+					<h1>Welcome **insert member name**!<br></h1>
 					<br>
 					<br>
 					<br>
@@ -98,7 +98,7 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 					<br>
 					<br>
 					<br>
-					<h2>Custom Modern Art Plants</h2>
+					<h2>Delivery updates are being sent to: **insert email**</h2>
 				</div>
 		   	</li>
 		   	</ul>
