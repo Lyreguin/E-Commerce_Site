@@ -57,7 +57,7 @@ session_start();
 			<div class="clear"></div>
 			<div class="navigation">
 				<ul class="navig">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<!--
 					<li><a href="bikes.html">Pots</a></li>
 					
@@ -67,7 +67,7 @@ session_start();
 					<li><a href="contact.html">Contact</a></li>
 				-->
 					<li><a href="#">Shop</a></li>
-					<li><a href="about.html">About</a></li>
+					<li><a href="about.php">About</a></li>
 					<li><a href="login.php">Log In</a></li>
 					<li><a href="register.php">Sign Up</a></li>
 				</ul>
