@@ -59,7 +59,7 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 					<li><a href="memberIndex.php">Home</a></li>
 					<li><a href="">Shop</a></li>
 					<li><a href="about.html">About</a></li>
-					<li><a href="login.html">Log In</a></li>
+					<li><a href="login.php">Log In</a></li>
 					<li><a href="register.php">Sign Up</a></li>
 				</ul>
 				<script>
