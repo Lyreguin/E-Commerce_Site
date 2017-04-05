@@ -55,7 +55,7 @@ else
         // session_register("Name");
         $_SESSION['login_user'] = $username;
          
-         header("location: register.php");
+         header("location: memberIndex.php");
     }else {
          $error = "Your Login Name or Password is invalid";
     }
