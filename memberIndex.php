@@ -11,14 +11,7 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 -->
 
 <?php
-// Retrieve member's information to display on their homepage
-
-//$db = mysqli_connect('localhost', 'root', '', 'siteusers') or die('Problem connection to server.');
-//$email = $_POST['email'];
-//$query = "SELECT * FROM customers WHERE email='$email'";
-//mysqli_query($db, $query) or die("error");
-//$result = mysqli_query($db, $query);
-session_start();
+	session_start();
 ?>
 
 <!DOCTYPE HTML>
@@ -90,7 +83,11 @@ session_start();
 		    <ul class="rslides" id="slider3">
 		    <li>
 		    	<div class="banner">
+<<<<<<< HEAD
 					<h1>Welcome <?php echo $_SESSION['login_user'] ?>!<br></h1>
+=======
+					<h1>Welcome <?php echo $_SESSION['login_user']?>!<br></h1>
+>>>>>>> origin/master
 					<br>
 					<br>
 					<br>
