@@ -115,7 +115,7 @@ else
 <title>PHPRO Login</title>
 </head>
 <body>
-<p><?php echo $message; 
+<p><?php
         echo $password;
         echo $username; ?>
 </body>
