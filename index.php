@@ -12,6 +12,9 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 
 <?php
 	session_start();
+	if ($_SESSION['login_email'] != null) {
+  	echo "<script>window.location = 'memberIndex.php'</script>";
+  }
 ?>
 
 <!DOCTYPE HTML>
@@ -49,7 +52,14 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 			
 			<div class="navigation">
 				<ul class="navig">
-					<li><a href="index.php">Home</a></li>
+					<li><a href="index.html">Home</a></li>
+					<!--
+					<li><a href="bikes.html">Pots</a></li>
+					<li><a href="best.html">Best Buy</a></li>
+					<li><a href="bikes.html">Offers</a></li>
+					<li><a href="best.html">Accessories</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				-->
 					<li><a href="">Shop</a></li>
 					<li><a href="about.php">About</a></li>
 					<li><a href="login.php">Log In</a></li>
@@ -83,8 +93,7 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 		    <ul class="rslides" id="slider3">
 		    <li>
 		    	<div class="banner">
-					<h1>Welcome <?php echo $_SESSION['login_user'] ?>!<br></h1>
-
+					<h1>Recycled, Remade, Repurposed<br></h1>
 					<br>
 					<br>
 					<br>
@@ -92,111 +101,86 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 					<br>
 					<br>
 					<br>
-					<h2>Delivery updates are being sent to: **insert email**</h2>
+					<h2>Custom Modern Art Plants</h2>
 				</div>
+		   	</li>
+		   	<li>
+		    	<div class="banner banner2">
+					<h1>Recycled, Remade, Repurposed<br></h1>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<h2>Custom Modern Art Plants</h2></div>
+		   	</li>
+		   	<li>
+		    	<div class="banner banner1">
+					<h1>Recycled, Remade, Repurposed<br></h1>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<h2>Custom Modern Art Plants</h2></div>
 		   	</li>
 		   	</ul>
 		    <div class="clearfix"> </div>
 		    </div>
 		<!-- Banner Slide Ends Here -->
-		
-		<!-- MEMBER'S ONLY Best Seller Starts Here -->
-
+		<!-- Best Seller Starts Here -->
+		<!--
+		<div class="best-seller">
+			<div class="best-seller-row">
+				<div class="seller-column">
+					<div class="sale-box">
+						<span class="on_sale title_shop">bestseller</span>
+					</div>
+					<img src="images/white-shoe-plant.jpg" alt=""  class="seller-img">
+				</div>
+				<div class="seller-column1">
+					<h3>Sale</h3>
+					<span class="sale-nip"></span>
+					<h4>Bicycle RetroSyperb Vii #1</h4>
+					<small>by Rodriguez Else</small>
+					<p>299.99$</p>
+					<div class="price">
+						<a href="single.html">Add to Shopping bag</a>
+						<span class="rating">Rating: 5.0 <i class="ratings"></i></span>
+					</div>
+					<p class="customer">Ask the Customer a Question</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		-->
 			<div class="biseller-info">
-			<ul id="memberFlexisel">
-
+			<ul id="flexiselDemo3">
+				<!--
 				<li>
 					<div class="biseller-column">
-					<img src="images/fabric.jpg" alt="" class="veiw-img">
-						<div class="veiw-img-mark2">
-							<a href="single.html">Member's Only Discount!</a>
-						</div>
-					<div class="biseller-name">
-						<h4>Fabric</h4>
-						<small>by Ankino Frique</small>
-					</div>
-					<div class="biseller-name1">
-						<p style="color:red; font-size:200%;">$49.99</p>
-					</div>
-					<div class="clearfix"></div>
-					<div class="price-s">
-						<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
-						<input type="hidden" name="cmd" value="_s-xclick">
-						<input type="hidden" name="hosted_button_id" value="9ADCXJSR943ML">
-						<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-						<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-						<input type="hidden" value="http://localhost/E-commerce_site/index.html" name="return">
-						<input type="hidden" value="2" name="rm">
-						<input type="hidden" value="219.99" name="amount">
-						</form>
-					</div>
-					
-					</div>
-				</li>
-				<li>
-					<div class="biseller-column">
-					<img src="images/fish-in-jar.jpg" alt="" class="veiw-img">
-						<div class="veiw-img-mark2">
-							<a href="single.html">Member's Only Discount!</a>
+					<img src="images/house-plant-pots.jgp" alt="" class="veiw-img">
+						<div class="veiw-img-mark">
+							<a href="single.html">Add to Cart</a>
 						</div>
 					<div class="biseller-name">
 						<h4>Fish in Jar</h4>
 						<small>by Enrique Salmo</small>
 					</div>
 					<div class="biseller-name1">
-						<p style="color:red; font-size:200%;">$99.99</p>
+						<p>$139.99</p>
 					</div>
 					<div class="clearfix"></div>
 					<div class="price-s">
-						<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
-						<input type="hidden" name="cmd" value="_s-xclick">
-						<input type="hidden" name="hosted_button_id" value="9ADCXJSR943ML">
-						<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-						<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-						<input type="hidden" value="http://localhost/E-commerce_site/index.html" name="return">
-						<input type="hidden" value="2" name="rm">
-						<input type="hidden" value="899.99" name="amount">
-						</form>
+						<a href="single.html">Add to Shopping bag</a>
 					</div>
 					
 					</div>
 				</li>
-				<li>
-					<div class="biseller-column">
-					<img src="images/white-shoe-plant-fit.jpg" alt="" class="veiw-img">
-						<div class="veiw-img-mark2">
-							<a href="single.html">Member's Only Discount!</a>
-						</div>
-					<div class="biseller-name">
-						<h4>White Shoe Plant</h4>
-						<small>by Marco Spielmann</small>
-					</div>
-					<div class="biseller-name1">
-						<p style="color:red; font-size:200%;">$49.99</p>
-					</div>
-					<div class="clearfix"></div>
-					<div class="price-s">
-						<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
-						<input type="hidden" name="cmd" value="_s-xclick">
-						<input type="hidden" name="hosted_button_id" value="9ADCXJSR943ML">
-						<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-						<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-						<input type="hidden" value="http://localhost/E-commerce_site/index.html" name="return">
-						<input type="hidden" value="2" name="rm">
-						<input type="hidden" value="219.99" name="amount">
-						</form>
-					</div>
-					
-					</div>
-				</li>
-	     	</ul>
-			</div>
-		
-		<!-- ORIGINAL Best Seller Starts Here -->
-
-			<div class="biseller-info">
-			<ul id="originalFlexisel">
-
+			-->
 				<li>
 					<div class="biseller-column">
 					<img src="images/fabric.jpg" alt="" class="veiw-img">
@@ -277,34 +261,7 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 		</div>
 			<script type="text/javascript">
 				 $(window).load(function() {
-					$("#memberFlexisel").flexisel({
-						visibleItems: 3,
-						animationSpeed: 1000,
-						autoPlay: true,
-						autoPlaySpeed: 3000,    		
-						pauseOnHover: true,
-						enableResponsiveBreakpoints: true,
-				    	responsiveBreakpoints: { 
-				    		portrait: { 
-				    			changePoint:480,
-				    			visibleItems: 1
-				    		}, 
-				    		landscape: { 
-				    			changePoint:640,
-				    			visibleItems: 2
-				    		},
-				    		tablet: { 
-				    			changePoint:768,
-				    			visibleItems: 3
-				    		}
-				    	}
-				    });
-				    
-				});
-			   </script>
-			   <script type="text/javascript">
-				 $(window).load(function() {
-					$("#originalFlexisel").flexisel({
+					$("#flexiselDemo3").flexisel({
 						visibleItems: 3,
 						animationSpeed: 1000,
 						autoPlay: true,

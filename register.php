@@ -6,6 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
 <?php
+
 	session_start();
 ?>
 
@@ -56,7 +57,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			
 			<div class="navigation">
 				<ul class="navig">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<!--
 					<li><a href="bikes.html">Pots</a></li>
 					<li><a href="best.html">Best Buy</a></li>
@@ -65,7 +66,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<li><a href="contact.html">Contact</a></li>
 				-->
 					<li><a href="">Shop</a></li>
-					<li><a href="about.html">About</a></li>
+					<li><a href="about.php">About</a></li>
 					<li><a href="login.php">Log In</a></li>
 					<li><a href="register.php">Sign Up</a></li>
 
