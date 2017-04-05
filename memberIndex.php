@@ -11,10 +11,7 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 -->
 
 <?php
-	// Retrieve member's information to display on their homepage
 	session_start();
-	//$username = $_GET['login_user'];
-	//echo "<script type='text/javascript'>alert('Username is: ')</script>";
 ?>
 
 <!DOCTYPE HTML>
