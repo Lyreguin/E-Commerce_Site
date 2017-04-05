@@ -65,7 +65,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				-->
 					<li><a href="">Shop</a></li>
 					<li><a href="about.html">About</a></li>
-					<li><a href="login.html">Log In</a></li>
+					<li><a href="login.php">Log In</a></li>
 					<li><a href="register.php">Sign Up</a></li>
 
 				</ul>
@@ -120,6 +120,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							 <div>
 								 <span>Email<label>*</label></span>
 								 <input type="text" name="email" required placeholder="Enter a valid email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$" title="example@test.com"> 
+							 </div>
+							 <div>
+							 	<span>Password<label>*</label></span>
+							 	<input type="text" name="password">
 							 </div>
 							 <div style="visibility:hidden">
 								 <span>Invisible Placeholder<label>*</label></span>
@@ -245,8 +249,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						 			$city = $_POST['city'];
 						 			$state = $_POST['state'];
 						 			$zip = $_POST['zip'];
-						 			$sql = "INSERT INTO customers (`Name`, `Email`, `Address`, `City`, `State`, `Zip Code`) 
-						 			VALUES ('$name', '$email', '$address', '$city', '$state', '$zip')";
+						 			$password = $_POST['password'];
+						 			$sql = "INSERT INTO customers (`Name`, `Email`, `Address`, `City`, `State`, `Zip Code`, `Password`) 
+						 			VALUES ('$name', '$email', '$address', '$city', '$state', '$zip', '$password')";
 						 			if (mysqli_query($db, $sql)) 
 						 			{
 						 				echo "<script type='text/javascript'>alert('Account Created Successfully!')</script>";

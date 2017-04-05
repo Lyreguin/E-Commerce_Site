@@ -139,23 +139,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				   <div class="col-md-6 login-right">
 				  	<h3>REGISTERED CUSTOMERS</h3>
 					<p>If you have an account with us, please log in.</p>
-					<form>
-					  <div>
-						<span>Email Address<label>*</label></span>
-						<input type="text"> 
-					  </div>
-					  <div>
-						<span>Password<label>*</label></span>
-						<input type="text"> 
-					  </div>
-					  <a class="forgot" href="#">Forgot Your Password?</a>
-					  <input type="submit" value="Login">
-				    </form>
+					<h2>Login Here</h2>
+					<form action="login_submit.php" method="post">
+					<fieldset>
+					<p>
+					<label for="username">Email Address</label>
+					<input type="text" id="username" name="username" value="" maxlength="20" />
+					</p>
+					<p>
+					<label for="password">Password</label>
+					<input type="text" id="password" name="password" value="" maxlength="20" />
+					</p>
+					<p>
+					<input type="submit" value="→ Login" />
+					</p>
+					</fieldset>
+					</form>
 				   </div>	
 				   <div class="col-md-6 login-left">
 				  	 <h3>NEW CUSTOMERS</h3>
 					 <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
-					 <a class="acount-btn" href="register.html">Create an Account</a>
+					 <a class="acount-btn" href="register.php">Create an Account</a>
 				   </div>
 				   <div class="clearfix"> </div>
 				 </div>
