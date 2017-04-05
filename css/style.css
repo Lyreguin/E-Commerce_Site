@@ -345,6 +345,12 @@ p.customer{
 	text-align: left;
 	padding: 1em 1em 1em 2em;
 }
+.biseller-column2 {
+	text-align: left;
+	padding: 1em 1em 1em 2em;
+	border-style: solid;
+	border-color: red;
+}
 .biseller-column img{
 	margin-bottom:2em;
 	width:100%;
@@ -379,7 +385,10 @@ p.customer{
 	color: #000;
 	margin-top:1em;
 }
- #flexiselDemo3 {
+ #memberFlexisel {
+	display: none;
+}
+ #originalFlexisel {
 	display: none;
 }
 .nbs-flexisel-container {
@@ -424,6 +433,7 @@ p.customer{
 }
 .biseller-info {
 	margin: 2em 0 0;
+
 }
 /*** Navigation ***/
 .nbs-flexisel-nav-left, .nbs-flexisel-nav-right {
@@ -578,6 +588,20 @@ img.veiw-img{
 }
 .biseller-column:hover div.veiw-img-mark{
 	display: block;
+}
+.veiw-img-mark2{
+	position:absolute;
+	top:30%;
+	left:12.5%;
+}
+.veiw-img-mark2 a{
+	background:#ff0000;
+	padding:10px;
+	color:#000;
+	font-size:1.75em;
+	font-weight:900;
+	text-decoration:none;
+	text-transform:uppercase;
 }
 p.copyright{
 	font-size:14px;
