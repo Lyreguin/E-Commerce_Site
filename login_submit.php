@@ -4,7 +4,7 @@
 session_start();
 
 /*** check if the users is already logged in ***/
-if(isset( $_SESSION['user_id'] ))
+if(isset( $_SESSION['login_user'] == $_POST['username'] ))
 {
     $message = 'Users is already logged in';
 }

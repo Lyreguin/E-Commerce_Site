@@ -18,7 +18,7 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 //$query = "SELECT * FROM customers WHERE email='$email'";
 //mysqli_query($db, $query) or die("error");
 //$result = mysqli_query($db, $query);
-
+session_start();
 ?>
 
 <!DOCTYPE HTML>
@@ -90,7 +90,7 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 		    <ul class="rslides" id="slider3">
 		    <li>
 		    	<div class="banner">
-					<h1>Welcome **insert member name**!<br></h1>
+					<h1>Welcome <?php echo $_SESSION['login_user'] ?>!<br></h1>
 					<br>
 					<br>
 					<br>

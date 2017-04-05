@@ -4,6 +4,10 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php
+session_start();
+?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -170,7 +174,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				 </div>
 			</div>
 			<div class="clearfix"></div>
-			<!--- fOOTER Starts Here --->
+			<!--- fOOTER Starts Here !-->
 		<div class="footer-top abt-ft">
 			<ul class="bottom-list">
 				<li><a href="#">terms & conditions</a></li>
@@ -189,7 +193,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</ul>
 		<p class="copyright">2014 Template By <a href="http://w3layouts.com/">W3layouts</a></p>
 	</div>
-	<!--- fOOTER Starts Here --->
+	<!--- fOOTER Starts Here !-->
 </body>
 </html>
 
@@ -198,12 +202,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 function display()
 {
 	/*** check if the users is already logged in ***/
-	if(isset( $_SESSION['user_id'] ))
+	if( $_SESSION['login_user'] == $_POST['username'] )
 	{
 		echo "<script type='text/javascript'>alert('Users is already logged in')</script>";
 	}
 	/*** check that both the username, password have been submitted ***/
-	if(!isset( $_POST['username'], $_POST['password']))
+	elseif(!isset( $_POST['username'], $_POST['password']))
 	{
 		echo "<script type='text/javascript'>alert('Please enter a valid username and password')</script>";
 	}
