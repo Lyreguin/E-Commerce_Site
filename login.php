@@ -64,7 +64,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				-->
 					<li><a href="#">Shop</a></li>
 					<li><a href="about.html">About</a></li>
-					<li><a href="#">Log In</a></li>
+					<li><a href="login.php">Log In</a></li>
 					<li><a href="register.php">Sign Up</a></li>
 				</ul>
 				<script>
@@ -130,7 +130,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<ul class="product-top-list">
 						<li><a href="index.html">Home</a>&nbsp;<span>&gt;</span></li>
 						<li><a href="#">Account</a>&nbsp;<span>&gt;</span></li>
-						<li><span class="act"><a href="Login.html">Log In</a></span>&nbsp;</li>
+						<li><span class="act"><a href="login.php">Log In</a></span>&nbsp;</li>
 					</ul>
 					<p class="back"><a href="index.html">Back to Previous</a></p>
 					<div class="clearfix"></div>
