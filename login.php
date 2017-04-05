@@ -237,7 +237,8 @@ function display()
 		$count = mysqli_num_rows($result);
 		if($count == 1) {
 			// session_register("Name");
-			$_SESSION['login_user'] = $username;
+			$_SESSION['login_email'] = $username;
+			$_SESSION['login_name'] = $row["Name"];
 			echo "<script>window.location = 'memberIndex.php'</script>";
 			//header("Location: memberIndex.php");
 		}else {
