@@ -83,8 +83,7 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 		    <ul class="rslides" id="slider3">
 		    <li>
 		    	<div class="banner">
-					<h1>Welcome <?php echo $_SESSION['login_user'] ?>!<br></h1>
-
+					<h1>Welcome <?php echo $_SESSION['login_name'] ?>!<br></h1>
 					<br>
 					<br>
 					<br>
@@ -92,7 +91,7 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 					<br>
 					<br>
 					<br>
-					<h2>Delivery updates are being sent to: **insert email**</h2>
+					<h2>Delivery updates are being sent to: <?php echo $_SESSION['login_email']?></h2>
 				</div>
 		   	</li>
 		   	</ul>
