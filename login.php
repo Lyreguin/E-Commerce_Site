@@ -140,8 +140,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				  	<h3>REGISTERED CUSTOMERS</h3>
 					<p>If you have an account with us, please log in.</p>
 					<h2>Login Here</h2>
-					<form action="login_submit.php" method="post">
-					<fieldset>
+					<form method="post" action="login.php">
 					<p>
 					<label for="username">Email Address</label>
 					<input type="text" id="username" name="username" value="" maxlength="20" />
@@ -151,10 +150,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<input type="text" id="password" name="password" value="" maxlength="20" />
 					</p>
 					<p>
-					<input type="submit" value="→ Login" />
+					<input type="submit" value="Login" name="login"/>
 					</p>
-					</fieldset>
 					</form>
+					
+					<?php
+					if(isset($_POST['login']))
+					{
+						display();
+					}
+					?>
 				   </div>	
 				   <div class="col-md-6 login-left">
 				  	 <h3>NEW CUSTOMERS</h3>
@@ -187,3 +192,54 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!--- fOOTER Starts Here --->
 </body>
 </html>
+
+<?php
+
+function display()
+{
+	/*** check if the users is already logged in ***/
+	if(isset( $_SESSION['user_id'] ))
+	{
+		echo "<script type='text/javascript'>alert('Users is already logged in')</script>";
+	}
+	/*** check that both the username, password have been submitted ***/
+	if(!isset( $_POST['username'], $_POST['password']))
+	{
+		echo "<script type='text/javascript'>alert('Please enter a valid username and password')</script>";
+	}
+	/*** check the username is the correct length ***/
+	elseif (strlen( $_POST['username']) > 100 || strlen($_POST['username']) < 4)
+	{
+		echo "<script type='text/javascript'>alert('Username must be between 4 and 100 characters')</script>";
+	}
+	/*** check the password has only alpha numeric characters ***/
+	elseif (ctype_alnum($_POST['password']) != true)
+	{
+			/*** if there is no match ***/
+		echo "<script type='text/javascript'>alert('Password must be alpha numeric')</script>";
+	}
+	else
+	{
+		/*** if we are here the data is valid and we can insert it into database ***/
+		$username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+		$password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+
+
+		$db = mysqli_connect('localhost', 'root', '', 'siteusers') or die('Problem connection to server.');
+		$sql ="SELECT Name FROM customers WHERE Email = '$username' AND Password = '$password'";
+		$result = mysqli_query($db, $sql) or die('query failed');
+		$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+		$count = mysqli_num_rows($result);
+		if($count == 1) {
+			// session_register("Name");
+			$_SESSION['login_user'] = $username;
+			echo "<script>window.location = 'memberIndex.php'</script>";
+			//header("Location: memberIndex.php");
+		}else {
+			 $error = "Your Login Name or Password is invalid";
+		}
+	}
+}
+	
+?>
+

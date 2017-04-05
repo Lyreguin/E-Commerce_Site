@@ -116,6 +116,7 @@ else
 </head>
 <body>
 <p><?php
+		echo $message;
         echo $password;
         echo $username; ?>
 </body>

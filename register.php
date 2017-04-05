@@ -240,7 +240,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									echo "<script type='text/javascript'>alert('This email address is already associated with an account.')</script>";
 						 		} 
 						 		else 
-						 		{						 			// Here we say that you registered effectively and make a post request to our sql database!
+						 		{	// Here we say that you registered effectively and make a post request to our sql database!
 						 			// I'm going to sleep now.
 						 			// Also I had to change my database table name to customers because I couldn't delete siteUsers.
 						 			$name = $_POST['firstName']." ".$_POST['lastName'];
