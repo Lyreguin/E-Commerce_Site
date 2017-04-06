@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
 <?php
-	session_destroy()();
+session_start();
 ?>
 
 <!DOCTYPE HTML>
@@ -69,7 +69,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				-->
 					<li><a>Shop</a></li>
 					<li><a href="about.php">About</a></li>
-					<li><a href="login.php">Log In</a></li>
+					<li><?php
+							if(!isset($_SESSION['login_email'])){
+								echo '<a href="login.php">Log In</a>';
+							}
+							else{
+								echo '<a href="signout.php">Log Out</a>';
+							}
+						?></li>
 					<li><a href="register.php">Sign Up</a></li>
 				</ul>
 				<script>

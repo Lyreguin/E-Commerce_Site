@@ -68,7 +68,14 @@ session_start();
 				-->
 					<li><a href="#">Shop</a></li>
 					<li><a href="about.php">About</a></li>
-					<li><a href="login.php">Log In</a></li>
+					<li><?php
+							if(!isset($_SESSION['login_email'])){
+								echo '<a href="login.php">Log In</a>';
+							}
+							else{
+								echo '<a href="signout.php">Log Out</a>';
+							}
+						?></li>
 					<li><a href="register.php">Sign Up</a></li>
 				</ul>
 				<script>
@@ -202,9 +209,12 @@ session_start();
 function display()
 {
 	/*** check if the users is already logged in ***/
-	if( $_SESSION['login_user'] == $_POST['username'] )
+	if(isset($_SESSION['login_email']))
 	{
-		echo "<script type='text/javascript'>alert('Users is already logged in')</script>";
+		echo "Blah";
+		if($_SESSION['login_email'] == $_POST['username']) {
+			echo "<script type='text/javascript'>alert('Users is already logged in')</script>";
+		}
 	}
 	/*** check that both the username, password have been submitted ***/
 	elseif(!isset( $_POST['username'], $_POST['password']))
@@ -241,7 +251,7 @@ function display()
 			echo "<script>window.location = 'memberIndex.php'</script>";
 			//header("Location: memberIndex.php");
 		}else {
-			 $error = "Your Login Name or Password is invalid";
+			 echo "<script type='text/javascript'>alert('Your Login Name or Password is invalid')</script>";
 		}
 	}
 }

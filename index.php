@@ -12,9 +12,9 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 
 <?php
 	session_start();
-	if ($_SESSION['login_email'] != null) {
-  	echo "<script>window.location = 'memberIndex.php'</script>";
-  }
+	if(isset($_SESSION['login_email'])) {
+		echo "<script>window.location = 'memberIndex.php'</script>";
+	}
 ?>
 
 <!DOCTYPE HTML>
@@ -52,7 +52,7 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 			
 			<div class="navigation">
 				<ul class="navig">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<!--
 					<li><a href="bikes.html">Pots</a></li>
 					<li><a href="best.html">Best Buy</a></li>
@@ -62,7 +62,15 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 				-->
 					<li><a href="">Shop</a></li>
 					<li><a href="about.php">About</a></li>
-					<li><a href="login.php">Log In</a></li>
+					<li><?php
+							if(!isset($_SESSION['login_email'])){
+								echo '<a href="login.php">Log In</a>';
+							}
+							else{
+								echo '<a href="signout.php">Log Out</a>';
+							}
+						?>
+					</li>
 					<li><a href="register.php">Sign Up</a></li>
 				</ul>
 				<script>

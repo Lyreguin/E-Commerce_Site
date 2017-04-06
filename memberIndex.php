@@ -12,6 +12,9 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 
 <?php
 	session_start();
+	if(!isset($_SESSION['login_email'])) {
+		echo "<script>window.location = 'index.php'</script>";
+	}
 ?>
 
 <!DOCTYPE HTML>
@@ -52,7 +55,14 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 					<li><a href="index.php">Home</a></li>
 					<li><a href="">Shop</a></li>
 					<li><a href="about.php">About</a></li>
-					<li><a href="login.php">Log In</a></li>
+					<li><?php
+							if(!isset($_SESSION['login_email'])){
+								echo '<a href="login.php">Log In</a>';
+							}
+							else{
+								echo '<a href="signout.php">Log Out</a>';
+							}
+						?></li>
 					<li><a href="register.php">Sign Up</a></li>
 				</ul>
 				<script>
@@ -83,7 +93,11 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 		    <ul class="rslides" id="slider3">
 		    <li>
 		    	<div class="banner">
-					<h1>Welcome <?php echo $_SESSION['login_name'] ?>!<br></h1>
+					<h1>Welcome <?php 
+						if(isset($_SESSION['login_name'])) {
+							echo $_SESSION['login_name'];
+						}
+					?>!<br></h1>
 					<br>
 					<br>
 					<br>
@@ -91,7 +105,11 @@ http://www.webassist.com/tutorials/PayPal-Sandbox-for-testing
 					<br>
 					<br>
 					<br>
-					<h2>Delivery updates are being sent to: <?php echo $_SESSION['login_email']?></h2>
+					<h2>Delivery updates are being sent to: <?php
+						if(isset($_SESSION['login_email'])){
+							echo $_SESSION['login_email'];
+						}
+					 ?></h2>
 				</div>
 		   	</li>
 		   	</ul>
