@@ -753,7 +753,7 @@ ul.tab_list li a:hover {
 /*--- Responsive Tabs ---*/
 /*--- Login ---*/
 .account_grid {
-	margin-bottom:2em;
+	margin-bottom:1em;
 }
 .login-left {
 	padding: 0 1em 0;
@@ -763,6 +763,12 @@ ul.tab_list li a:hover {
 	font-size: 1em;
 	padding-bottom: 0.5em;
 	font-weight: bold;
+	/*
+	color:#FF5B36;
+	font-size: 1em;
+	padding-bottom: 5px;
+	margin: 0;
+	*/
 }
 .login-left p, .login-right p {
 	color: #555;
@@ -771,12 +777,24 @@ ul.tab_list li a:hover {
 	margin: 0 0 1.5em 0;
 	line-height: 1.8em;
 }
-.login-left p, .login-right p {
-	color: #555;
+.login-right div {
+	width: 48%;
+	float: left;
+	margin: 10px 0;
+}
+.login-right span {
+	color:#555;
+	font-size: 0.8125em;
+	padding-bottom: 0.2em;
 	display: block;
-	font-size: 0.8em;
-	margin: 0 0 1.5em 0;
-	line-height: 1.8em;
+	text-transform: uppercase;
+}
+.login-right input[type="text"], .login-right input[type="password"]{
+	border: 1px solid #EEE;
+	outline-color:#FF5B36;
+	width: 96%;
+	font-size: 2em;
+	padding: 0.5em;
 }
 .prodys {
 	min-height: 300px!important;
