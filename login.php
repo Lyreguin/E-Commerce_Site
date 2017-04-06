@@ -209,9 +209,8 @@ session_start();
 function display()
 {
 	/*** check if the users is already logged in ***/
-	if(isset($_SESSION['login_email']))
-	{
-		echo "Blah";
+
+	if(isset($_SESSION['login_email'])) {
 		if($_SESSION['login_email'] == $_POST['username']) {
 			echo "<script type='text/javascript'>alert('Users is already logged in')</script>";
 		}
@@ -245,11 +244,9 @@ function display()
 		$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 		$count = mysqli_num_rows($result);
 		if($count == 1) {
-			// session_register("Name");
 			$_SESSION['login_email'] = $username;
 			$_SESSION['login_name'] = $row["Name"];
 			echo "<script>window.location = 'memberIndex.php'</script>";
-			//header("Location: memberIndex.php");
 		}else {
 			 echo "<script type='text/javascript'>alert('Your Login Name or Password is invalid')</script>";
 		}
